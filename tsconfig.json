@@ -10,12 +10,12 @@
     "noLib": false,
     "preserveConstEnums": true,
     "removeComments": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "sourceMap": true,
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false,
     "noImplicitUseStrict": false,
-    "outDir": "./dist"
+    "outDir": "."
   },
   "compileOnSave": false,
   "formatCodeOptions": {
