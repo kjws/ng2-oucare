@@ -1,0 +1,46 @@
+// 從 https://github.com/tameraydin/ngToast/blob/master/src/styles/less/ngToast.less 參考
+
+.ou-toast-wrapper {
+  position: fixed;
+  z-index: 1080;
+  width: 100%;
+  height: 0;
+  margin-top: 20px;
+  text-align: center;
+
+  &.ou-toast-top  {
+    top: 0;
+    bottom: auto;
+
+    .ou-toast-list {
+      top: 0;
+      bottom: auto;
+    }
+
+    &.ou-toast-center  {
+      .ou-toast-list {
+        position: static;
+      }
+    }
+  }
+
+  .ou-toast-list {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ou-toast-message {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    .alert {
+      display: inline-block;
+    }
+  }
+}

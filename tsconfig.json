@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "noImplicitUseStrict": false,
+    "outDir": "./dist"
+  },
+  "compileOnSave": false,
+  "formatCodeOptions": {
+    "indentSize": 2
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
