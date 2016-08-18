@@ -8,14 +8,14 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "noLib": false,
+    "outDir": ".",
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": ".",
     "sourceMap": true,
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false,
-    "noImplicitUseStrict": false,
-    "outDir": "."
+    "noImplicitUseStrict": false
   },
   "compileOnSave": false,
   "formatCodeOptions": {

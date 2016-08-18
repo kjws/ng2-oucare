@@ -1,10 +1,10 @@
 {
   "name": "ng2-oucare",
-  "globalDependencies": {
-    "node": "registry:env/node#4.0.0+20160723033700",
-    "core-js": "registry:dt/core-js#0.0.0+20160602141332"
-  },
   "dependencies": {
-    "lodash": "registry:npm/lodash#4.0.0+20160701205107"
+    "lodash": "registry:npm/lodash#4.0.0+20160723033700"
+  },
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+    "node": "registry:dt/node#6.0.0+20160817204926"
   }
 }
