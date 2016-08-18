@@ -25,15 +25,11 @@ const DEFAULT: ToastParam = {
 
 @Injectable()
 export class ToastService implements IToastService {
-  private _default: ToastParam = DEFAULT;
-  private _toastList: ToastParam[] = [];
-  private _idMap: any = {};
+  private default: ToastParam = DEFAULT;
+  private toastList: ToastParam[] = [];
+  private idMap: any = {};
 
-  constructor(private _ngZone: NgZone) { }
-
-  get toastList() {
-    return this._toastList;
-  }
+  constructor(private ngZone: NgZone) { }
 
   [Symbol.iterator]() {
     return this.toastList.values();
@@ -45,10 +41,10 @@ export class ToastService implements IToastService {
     toast.id = this.getId();
 
     // this._toastList.unshift(toast);
-    this._toastList.push(toast);
+    this.toastList.push(toast);
 
     if (toast.dismissOnTimeout) {
-      setTimeout(() => this._ngZone.run(() => this.dismiss(toast.id)), toast.timeout);
+      setTimeout(() => this.ngZone.run(() => this.dismiss(toast.id)), toast.timeout);
     }
 
     return toast.id;
@@ -80,22 +76,22 @@ export class ToastService implements IToastService {
 
   private parseToast(toastParam: ToastParam | string): ToastParam {
     if (typeof toastParam === 'string') {
-      return _.merge({}, this._default, { content: toastParam });
+      return _.merge({}, this.default, { content: toastParam });
     } else {
-      return _.merge({}, this._default, toastParam);
+      return _.merge({}, this.default, toastParam);
     }
   }
 
   dismiss(id: number): any {
-    const index = _.findIndex(this._toastList, { id });
-    this._toastList.splice(index, 1);
-    delete this._idMap[id];
+    const index = _.findIndex(this.toastList, { id });
+    this.toastList.splice(index, 1);
+    delete this.idMap[id];
   };
 
   private getId(): number {
-    let id = this._toastList.length;
-    while (this._idMap[id]) { id++; }
-    this._idMap[id] = true;
+    let id = this.toastList.length;
+    while (this.idMap[id]) { id++; }
+    this.idMap[id] = true;
     return id;
   }
 }
