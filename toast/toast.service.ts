@@ -21,7 +21,7 @@ const DEFAULT: ToastParam = {
   className: 'success',
   dismissOnTimeout: true,
   timeout: 4000,
-}
+};
 
 @Injectable()
 export class ToastService implements IToastService {
