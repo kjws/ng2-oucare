@@ -9,8 +9,7 @@
     "lodash": "^4.13.1"
   },
   "scripts": {
-    "lint": "tslint --project ./tslint.json --exclude **/node_modules/**/* && echo PASS || echo WARNING",
-    "install": "npm install codelyzer"
+    "lint": "tslint --project ./tslint.json --exclude **/node_modules/**/* && echo PASS || echo WARNING"
   },
   "typings": "./index.d.ts",
   "author": "OUcare.com",
