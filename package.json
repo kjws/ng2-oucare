@@ -2,23 +2,19 @@
   "name": "ng2-oucare",
   "version": "0.1.0",
   "description": "",
-  "main": "./index.js",
+  "main": "./toast/index.ts",
   "peerDependencies": {
-    "typescript": "2.0.2",
     "@angular/core": "~2.0.0",
     "@angular/common": "~2.0.0",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "^0.6.23",
     "lodash": "^4.13.1"
   },
   "scripts": {
-    "lint": "tslint --project ./tslint.json --exclude **/node_modules/**/* && echo PASS || echo WARNING"
+    "lint": "tslint --project ./tslint.json --exclude **/node_modules/**/* && echo PASS || echo WARNING",
+    "install": "npm install codelyzer"
   },
   "typings": "./index.d.ts",
   "author": "OUcare.com",
-  "dependencies": {
-    "codelyzer": "0.0.28"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/common": "~2.0.0",
     "@angular/core": "~2.0.0",

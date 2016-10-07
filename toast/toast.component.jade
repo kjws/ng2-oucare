@@ -1,8 +1,8 @@
 .ou-toast-wrapper.ou-toast-top.ou-toast-center
   ul.ou-toast-list
-    //- @flyInOut="'in'"
     li.ou-toast-message(
-        *ngFor="let toast of toastService.toastList; trackBy:trackByToasts" )
+        *ngFor="let toast of toastService.toastList; trackBy:trackByToasts"
+        ,[@flyInOut]="'in'")
       .alert(role="alert"
           ,[class.alert-success]="toast.className==='success'"
           ,[class.alert-info]="toast.className==='info'"

@@ -8,16 +8,17 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "noLib": false,
-    "outDir": ".",
+    "outDir": "./build",
     "preserveConstEnums": true,
     "removeComments": true,
-    "rootDir": ".",
+    "rootDir": "./",
     "sourceMap": true,
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false,
     "noImplicitUseStrict": false
   },
   "compileOnSave": false,
+  "buildOnSave": false,
   "formatCodeOptions": {
     "indentSize": 2
   },

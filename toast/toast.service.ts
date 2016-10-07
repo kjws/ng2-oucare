@@ -31,10 +31,6 @@ export class ToastService implements IToastService {
 
   constructor(private ngZone: NgZone) { }
 
-  [Symbol.iterator]() {
-    return this.toastList.values();
-  }
-
   create(toastParam: ToastParam | string): number {
     let toast: ToastParam = this.parseToast(toastParam);
 
@@ -44,7 +40,8 @@ export class ToastService implements IToastService {
     this.toastList.push(toast);
 
     if (toast.dismissOnTimeout) {
-      setTimeout(() => this.ngZone.run(() => this.dismiss(toast.id)), toast.timeout);
+      setTimeout(() => this.ngZone.run(() =>
+        this.dismiss(toast.id)), toast.timeout);
     }
 
     return toast.id;
