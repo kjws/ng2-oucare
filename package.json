@@ -4,30 +4,32 @@
   "description": "",
   "main": "./index.js",
   "peerDependencies": {
-    "typescript": ">=1.8",
-    "typings": ">=1.3",
-    "@angular/core": "2.0.0",
-    "@angular/common": "2.0.0",
+    "typescript": "2.0.2",
+    "@angular/core": "~2.0.0",
+    "@angular/common": "~2.0.0",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.23",
     "lodash": "^4.13.1"
   },
   "scripts": {
-    "install": "typings install && tsc",
     "lint": "tslint --project ./tslint.json --exclude **/node_modules/**/* && echo PASS || echo WARNING"
   },
   "typings": "./index.d.ts",
   "author": "OUcare.com",
-  "dependencies": {},
+  "dependencies": {
+    "codelyzer": "0.0.28"
+  },
   "devDependencies": {
+    "@angular/common": "~2.0.0",
+    "@angular/core": "~2.0.0",
+    "@types/core-js": "^0.9.34",
+    "@types/lodash": "^4.14.37",
+    "@types/node": "^6.0.45",
     "codelyzer": "0.0.28",
-    "tslint": "^3.15.1",
-    "typescript": ">=1.8",
-    "typings": ">=1.3",
-    "@angular/core": "2.0.0",
-    "@angular/common": "2.0.0",
+    "lodash": "^4.13.1",
     "rxjs": "5.0.0-beta.12",
-    "zone.js": "^0.6.23",
-    "lodash": "^4.13.1"
+    "tslint": "^3.15.1",
+    "typescript": "2.0.2",
+    "zone.js": "^0.6.23"
   }
 }

@@ -2,7 +2,7 @@
   ul.ou-toast-list
     //- @flyInOut="'in'"
     li.ou-toast-message(
-        *ngFor="let toast of toastService; trackBy:trackByToasts" )
+        *ngFor="let toast of toastService.toastList; trackBy:trackByToasts" )
       .alert(role="alert"
           ,[class.alert-success]="toast.className==='success'"
           ,[class.alert-info]="toast.className==='info'"

@@ -26,8 +26,8 @@ const DEFAULT: ToastParam = {
 @Injectable()
 export class ToastService implements IToastService {
   private default: ToastParam = DEFAULT;
-  private toastList: ToastParam[] = [];
   private idMap: any = {};
+  toastList: ToastParam[] = [];
 
   constructor(private ngZone: NgZone) { }
 
