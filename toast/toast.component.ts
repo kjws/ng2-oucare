@@ -2,9 +2,11 @@ import { Component, trigger, state, style, transition, animate, keyframes } from
 import { ToastService, ToastParam } from './toast.service';
 
 
+const template = require('./toast.component.jade');
+
 @Component({
   selector: 'ou-toast',
-  template: require('./toast.component.jade')(),
+  template: (typeof template === 'function') ? template() : template,
   styles: [require('./toast.component.less')],
   animations: [
     trigger('flyInOut', [
