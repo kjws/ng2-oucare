@@ -4,8 +4,8 @@
   "description": "",
   "main": "./toast/index.ts",
   "peerDependencies": {
-    "@angular/core": "~2.0.0",
-    "@angular/common": "~2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/common": "^2.0.0",
     "lodash": "^4.13.1"
   },
   "scripts": {
@@ -15,8 +15,8 @@
   "author": "OUcare.com",
   "dependencies": {},
   "devDependencies": {
-    "@angular/common": "~2.0.0",
-    "@angular/core": "~2.0.0",
+    "@angular/common": "^2.0.0",
+    "@angular/core": "^2.0.0",
     "@types/core-js": "^0.9.34",
     "@types/lodash": "^4.14.37",
     "@types/node": "^6.0.45",
