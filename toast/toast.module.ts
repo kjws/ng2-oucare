@@ -24,4 +24,10 @@ export class ToastModule {
       ],
     };
   }
+
+  static forChild(): ModuleWithProviders {
+    return {
+      ngModule: ToastModule,
+    };
+  }
 }
