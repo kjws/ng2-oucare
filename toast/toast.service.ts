@@ -1,8 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
 
-import * as _ from 'lodash';
-
-
 export interface IToastService {
   create(toastParam: ToastParam | string): number;
   dismiss(id: number): any;
@@ -73,14 +70,14 @@ export class ToastService implements IToastService {
 
   private parseToast(toastParam: ToastParam | string): ToastParam {
     if (typeof toastParam === 'string') {
-      return _.merge({}, this.default, { content: toastParam });
+      return Object.assign({}, this.default, { content: toastParam });
     } else {
-      return _.merge({}, this.default, toastParam);
+      return Object.assign({}, this.default, toastParam);
     }
   }
 
   dismiss(id: number): any {
-    const index = _.findIndex(this.toastList, { id });
+    const index = this.toastList.findIndex(item => item.id === id);
     this.toastList.splice(index, 1);
     delete this.idMap[id];
   };
